@@ -1,0 +1,18 @@
+// This assembly is included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+:parent-context: {context}
+
+[id='assembly-2-{context}']
+= Installing and deploying {ProjectName}
+
+:context: assembly-2
+
+include::modules/con_module-name.adoc[leveloffset=+1]
+
+include::modules/proc_module-name.adoc[leveloffset=+1]
+
+include::modules/ref_module-name.adoc[leveloffset=+1]
+
+:context: {parent-context}

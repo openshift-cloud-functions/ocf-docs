@@ -1,0 +1,6 @@
+include::attributes.adoc[]
+
+= {ProjectName} {ProjectVersion}
+:context: {ProjectNameID}
+
+include::docs/assembly_install-deploy.adoc[leveloffset=+1]
