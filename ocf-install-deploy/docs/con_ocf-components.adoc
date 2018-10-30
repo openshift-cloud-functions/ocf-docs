@@ -1,0 +1,15 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id='ocf-components-{context}']
+= {ProjectName} components
+
+== Knative
+== {OLM}
+//informed by deliverables added by Ben to Jira issue?
+
+.Additional resources
+
+* For more information on {OS}, see link:https://docs.openshift.com/[Red Hat's OpenShift documentation].
+* For more information on Knative, see the link:https://github.com/knative/docs[Knative documentation repository on Github].

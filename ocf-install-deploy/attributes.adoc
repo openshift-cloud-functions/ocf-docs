@@ -1,4 +1,26 @@
-:toc:
+// Standard document attributes
+:data-uri!:
+:doctype: article
+:experimental:
+:idprefix:
+:imagesdir: images
+:numbered:
+:sectanchors!:
+:sectnums:
+:source-highlighter: highlightjs
+:toc: left
+:linkattrs:
+:toclevels: 2
+
+// Product attributes
 :ProjectName: OpenShift{nbsp}Cloud{nbsp}Functions
-:ProjectNameID: ocf
+:ProjectNameID: OCF
 :ProjectVersion: 0.2.0
+
+// Component and versions
+:KnativeVersion: value
+:ServiceMeshVersion: value
+:OpenShiftVersion: value
+:OS: OpenShift
+:OLM: Operator Lifecycle Manager
+:mini: Minishift

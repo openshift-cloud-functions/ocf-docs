@@ -3,4 +3,8 @@ include::attributes.adoc[]
 = {ProjectName} {ProjectVersion}
 :context: {ProjectNameID}
 
+//intro
+include::docs/assembly_intro.adoc[leveloffset=+1]
+
+//installation
 include::docs/assembly_install-deploy.adoc[leveloffset=+1]
