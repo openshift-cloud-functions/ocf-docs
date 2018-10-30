@@ -1,0 +1,15 @@
+// Module included in the following assemblies:
+//
+// assembly_ocf-prereqs.adoc
+
+[id='add-config-{context}']
+
+= Additional configuration requirements
+== Configuing {OS} for {ProjectName}
+//any particular openshift configurations required in their docs or ours? During setup or after?
+== Configuing {mini} for {ProjectName}
+//any particular openshift configurations required in their docs or ours? During setup or after?
+
+.Additional resources
+
+* For instructions on installing {mini}, see link:https://docs.okd.io/latest/minishift/getting-started/installing.html[Installing Minishift].

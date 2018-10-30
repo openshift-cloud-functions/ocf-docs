@@ -1,0 +1,13 @@
+// Module included in the following assemblies:
+//
+// <List assemblies here, each on a new line>
+
+[id='ocf-prereqs-{context}']
+= Before you begin
+
+include::con_supported.adoc[leveloffset=+1]
+include::con_add-config.adoc[leveloffset=+1]
+
+.Additional resources
+
+* For instructions on installing {mini}, see link:https://docs.okd.io/latest/minishift/getting-started/installing.html[Installing Minishift].

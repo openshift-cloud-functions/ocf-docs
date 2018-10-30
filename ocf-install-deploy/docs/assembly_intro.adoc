@@ -1,0 +1,13 @@
+// Module included in the following assemblies:
+//
+// master.adoc
+
+[id='intro-{context}']
+
+= Introduction
+
+{ProjectName} provides the missing link between {OS} deployments and those components which enable serverless functionality, such as Google's Knative and Red Hat Istio (Service Mesh).
+//what is the official name / how do we want to refer to knative, istio, etc. in docs for consistency?
+Serverless concepts like scaling pods and containers on demand, or managing apps using Operators via the {OLM} (OLM), are now possible on OpenShift using {ProjectName}.
+
+include::con_ocf-components.adoc[leveloffset=+1]

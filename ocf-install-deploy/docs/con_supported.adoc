@@ -1,0 +1,13 @@
+// Module included in the following assemblies:
+//
+//assembly_ocf-prereqs.adoc
+
+
+[id='supported-{context}']
+
+= Supported platforms
+{ProjectName} deployment is supported on the following platforms and versions.
+
+.Additional resources
+
+* For instructions on installing {mini}, see link:https://docs.okd.io/latest/minishift/getting-started/installing.html[Installing Minishift].
