@@ -1,3 +1,14 @@
+:toc:
+:ProjectName: OpenShift{nbsp}Cloud{nbsp}Functions
+:ProjectNameID: ocf
+:ProjectVersion: 0.2.0
+
+//documentation attributes for file structure - do not modify
+:rootdir: ../ocf-docs/
+:commondir: ../ocf-docs/common/
+
+//include::{includedir}/fragment1.adoc[]
+
 // Standard document attributes
 :data-uri!:
 :doctype: article

@@ -1,0 +1,4 @@
+include::../common/attributes.adoc[]
+
+= {ProjectName} {ProjectVersion}
+:context: {ProjectNameID}
