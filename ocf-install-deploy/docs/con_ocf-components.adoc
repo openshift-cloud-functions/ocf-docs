@@ -1,13 +1,15 @@
 // Module included in the following assemblies:
 //
-// <List assemblies here, each on a new line>
+// assembly_intro.adoc
 
 [id='ocf-components-{context}']
 = {ProjectName} components
 
-== Knative
-== {OLM}
-//informed by deliverables added by Ben to Jira issue?
+Knative::
+Short description of Knative.
+
+{OLM} (OLM)::
+Short description of OLM.
 
 .Additional resources
 

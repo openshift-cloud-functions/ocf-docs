@@ -8,6 +8,13 @@
 = Supported platforms
 {ProjectName} deployment is supported on the following platforms and versions.
 
+{mini}::
+Version 1.25.1 or newer.
+
+OKD ({OS} Origin)::
+Version 3.11 or newer.
+
 .Additional resources
 
 * For instructions on installing {mini}, see link:https://docs.okd.io/latest/minishift/getting-started/installing.html[Installing Minishift].
+* For instructions on installing {OS}, see link:https://docs.okd.io/latest[Installing OpenShift Origin].
