@@ -8,5 +8,8 @@
 = Installing and deploying {ProjectName}
 
 include::assembly_ocf-prereqs.adoc[leveloffset=+1]
+include::proc_installing-OLM.adoc[leveloffset=+1]
+include::proc_installing-knative-operators.adoc[leveloffset=+1]
+
 
 :context: {parent-context}

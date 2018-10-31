@@ -439,6 +439,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#assembly-2-OCF">2. Installing and deploying OpenShift&#160;Cloud&#160;Functions</a>
 <ul class="sectlevel2">
 <li><a href="#ocf-prereqs-OCF">2.1. Before you begin</a></li>
+<li><a href="#installing-OLM">2.2. Installing Operator Lifecycle Manager</a></li>
+<li><a href="#installing-knative-operators">2.3. Installing Knative Operators</a></li>
 </ul>
 </li>
 </ul>
@@ -449,17 +451,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="intro-OCF">1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>OpenShift&#160;Cloud&#160;Functions provides the missing link between OpenShift deployments and those components which enable serverless functionality, such as Google&#8217;s Knative and Red Hat Istio (Service Mesh).
+<p>OpenShift&#160;Cloud&#160;Functions provides the missing integration link between OpenShift deployments and components which enable serverless functionality, like Knative and Istio (Service Mesh).
 Serverless concepts like scaling pods and containers on demand, or managing apps using Operators via the Operator Lifecycle Manager (OLM), are now possible on OpenShift using OpenShift&#160;Cloud&#160;Functions.</p>
 </div>
 <div class="sect2">
 <h3 id="ocf-components-OCF">1.1. OpenShift&#160;Cloud&#160;Functions components</h3>
-<div class="sect3">
-<h4 id="knative">1.1.1. Knative</h4>
-
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Knative</dt>
+<dd>
+<p>Short description of Knative.</p>
+</dd>
+<dt class="hdlist1">Operator Lifecycle Manager (OLM)</dt>
+<dd>
+<p>Short description of OLM.</p>
+</dd>
+</dl>
 </div>
-<div class="sect3">
-<h4 id="operator_lifecycle_manager">1.1.2. Operator Lifecycle Manager</h4>
 <div class="ulist">
 <div class="title">Additional resources</div>
 <ul>
@@ -474,7 +482,6 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 </div>
 </div>
 </div>
-</div>
 <div class="sect1">
 <h2 id="assembly-2-OCF">2. Installing and deploying OpenShift&#160;Cloud&#160;Functions</h2>
 <div class="sectionbody">
@@ -485,23 +492,32 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 <div class="paragraph">
 <p>OpenShift&#160;Cloud&#160;Functions deployment is supported on the following platforms and versions.</p>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Minishift</dt>
+<dd>
+<p>Version 1.25.1 or newer.</p>
+</dd>
+<dt class="hdlist1">OKD (OpenShift Origin)</dt>
+<dd>
+<p>Version 3.11 or newer.</p>
+</dd>
+</dl>
+</div>
 <div class="ulist">
 <div class="title">Additional resources</div>
 <ul>
 <li>
 <p>For instructions on installing Minishift, see <a href="https://docs.okd.io/latest/minishift/getting-started/installing.html">Installing Minishift</a>.</p>
+</li>
+<li>
+<p>For instructions on installing OpenShift, see <a href="https://docs.okd.io/latest">Installing OpenShift Origin</a>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
 <h4 id="add-config-OCF">2.1.2. Additional configuration requirements</h4>
-<div class="sect4">
-<h5 id="configuing_openshift_for_openshift_cloud_functions">Configuing OpenShift for OpenShift&#160;Cloud&#160;Functions</h5>
-
-</div>
-<div class="sect4">
-<h5 id="configuing_minishift_for_openshift_cloud_functions">Configuing Minishift for OpenShift&#160;Cloud&#160;Functions</h5>
 <div class="ulist">
 <div class="title">Additional resources</div>
 <ul>
@@ -517,6 +533,57 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 <p>For instructions on installing Minishift, see <a href="https://docs.okd.io/latest/minishift/getting-started/installing.html">Installing Minishift</a>.</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="installing-OLM">2.2. Installing Operator Lifecycle Manager</h3>
+<div class="sect3">
+<h4 id="doing_one_procedure">2.2.1. Doing one procedure</h4>
+<div class="paragraph">
+<p>This paragraph is the procedure module introduction: a short description of the procedure.</p>
+</div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Start each step with an active verb.</p>
+</li>
+<li>
+<p>Include one command or action per step.</p>
+</li>
+<li>
+<p>Use an unnumbered bullet (*) if the procedure includes only one step.</p>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>A bulleted list of links to other material closely related to the contents of the procedure module.</p>
+</li>
+<li>
+<p>For more details on writing procedure modules, see the <a href="https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide">Modular Documentation Reference Guide</a>.</p>
+</li>
+<li>
+<p>Use a consistent system for file names, IDs, and titles. For tips, see <em>Anchor Names and File Names</em> in <a href="https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide">Modular Documentation Reference Guide</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="installing-knative-operators">2.3. Installing Knative Operators</h3>
+<div class="sect3">
+<h4 id="applying_yaml_configuration_for_knative_operators">2.3.1. Applying YAML configuration for Knative operators</h4>
+<div class="paragraph">
+<div class="title">Procedure</div>
+<p>Apply the <code>knative-operators.catalogsource.yaml</code> configuration file using the following command.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>oc apply -f https://raw.githubusercontent.com/openshift-cloud-functions/knative-operators/master/knative-operators.catalogsource.yaml</pre>
 </div>
 </div>
 </div>

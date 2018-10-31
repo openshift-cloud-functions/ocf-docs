@@ -5,9 +5,6 @@
 [id='add-config-{context}']
 
 = Additional configuration requirements
-== Configuing {OS} for {ProjectName}
-//any particular openshift configurations required in their docs or ours? During setup or after?
-== Configuing {mini} for {ProjectName}
 //any particular openshift configurations required in their docs or ours? During setup or after?
 
 .Additional resources
