@@ -1,0 +1,8 @@
+include::common/attributes.adoc[]
+
+= Introducing {ProjectName} {ProjectVersion}
+
+include::common/assembly_intro.adoc[leveloffset=+1]
+
+//installation
+include::ocf-install-deploy/master.adoc[leveloffset=+1]

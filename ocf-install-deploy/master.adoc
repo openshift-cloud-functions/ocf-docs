@@ -1,10 +1,19 @@
 include::../common/attributes.adoc[]
 
-= {ProjectName} {ProjectVersion}
-:context: {ProjectNameID}
-
-//intro
-include::docs/assembly_intro.adoc[leveloffset=+1]
+= Installing {ProjectName} on OKD/Minishift
+//need official names glossary for referring to other products consistently.
 
 //installation
 include::docs/assembly_install-deploy.adoc[leveloffset=+1]
+
+//configuration
+//include::assembly_configure.adoc[leveloffset=+1]
+
+//post-installation steps / tutorials?
+//include::assembly_tutorials.adoc[leveloffset=+1]
+
+//reference information
+//include::assembly_reference.adoc[leveloffset=+1]
+
+// Revision information
+//include::common/revision-info.adoc[leveloffset=+1]

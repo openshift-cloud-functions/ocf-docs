@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.6.1">
-<title>Deploying OpenShift&#160;Cloud&#160;Functions on OKD/Minishift</title>
+<title>Introducing OpenShift&#160;Cloud&#160;Functions 0.2.0</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -427,20 +427,19 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Deploying OpenShift&#160;Cloud&#160;Functions on OKD/Minishift</h1>
+<h1>Introducing OpenShift&#160;Cloud&#160;Functions 0.2.0</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
 <ul class="sectlevel1">
 <li><a href="#intro-{context}">1. Introduction</a>
 <ul class="sectlevel2">
 <li><a href="#ocf-components-{context}">1.1. OpenShift&#160;Cloud&#160;Functions components</a></li>
+<li><a href="#ocf-prereqs-{context}">1.2. Before you begin</a></li>
 </ul>
 </li>
-<li><a href="#assembly-2-{context}">2. Installing and deploying OpenShift&#160;Cloud&#160;Functions</a>
+<li><a href="#installing_openshift_cloud_functions_on_okd_minishift">2. Installing OpenShift&#160;Cloud&#160;Functions on OKD/Minishift</a>
 <ul class="sectlevel2">
-<li><a href="#ocf-prereqs-{context}">2.1. Before you begin</a></li>
-<li><a href="#installing-OLM">2.2. Installing Operator Lifecycle Manager</a></li>
-<li><a href="#installing-knative-operators">2.3. Installing Knative Operators</a></li>
+<li><a href="#assembly-2-{context}">2.1. Installing and deploying OpenShift&#160;Cloud&#160;Functions</a></li>
 </ul>
 </li>
 </ul>
@@ -480,15 +479,10 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 </ul>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="assembly-2-{context}">2. Installing and deploying OpenShift&#160;Cloud&#160;Functions</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="ocf-prereqs-{context}">2.1. Before you begin</h3>
+<h3 id="ocf-prereqs-{context}">1.2. Before you begin</h3>
 <div class="sect3">
-<h4 id="supported-{context}">2.1.1. Supported platforms</h4>
+<h4 id="supported-{context}">1.2.1. Supported platforms</h4>
 <div class="paragraph">
 <p>OpenShift&#160;Cloud&#160;Functions deployment is supported on the following platforms and versions.</p>
 </div>
@@ -515,17 +509,6 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 </li>
 </ul>
 </div>
-</div>
-<div class="sect3">
-<h4 id="add-config-{context}">2.1.2. Additional configuration requirements</h4>
-<div class="ulist">
-<div class="title">Additional resources</div>
-<ul>
-<li>
-<p>For instructions on installing Minishift, see <a href="https://docs.okd.io/latest/minishift/getting-started/installing.html">Installing Minishift</a>.</p>
-</li>
-</ul>
-</div>
 <div class="ulist">
 <div class="title">Additional resources</div>
 <ul>
@@ -536,10 +519,17 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="installing_openshift_cloud_functions_on_okd_minishift">2. Installing OpenShift&#160;Cloud&#160;Functions on OKD/Minishift</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="installing-OLM">2.2. Installing Operator Lifecycle Manager</h3>
+<h3 id="assembly-2-{context}">2.1. Installing and deploying OpenShift&#160;Cloud&#160;Functions</h3>
 <div class="sect3">
-<h4 id="doing_one_procedure">2.2.1. Doing one procedure</h4>
+<h4 id="installing-OLM">2.1.1. Installing Operator Lifecycle Manager</h4>
+<div class="sect4">
+<h5 id="doing_one_procedure">Doing one procedure</h5>
 <div class="paragraph">
 <p>This paragraph is the procedure module introduction: a short description of the procedure.</p>
 </div>
@@ -573,10 +563,10 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="installing-knative-operators">2.3. Installing Knative Operators</h3>
 <div class="sect3">
-<h4 id="applying_yaml_configuration_for_knative_operators">2.3.1. Applying YAML configuration for Knative operators</h4>
+<h4 id="installing-knative-operators">2.1.2. Installing Knative Operators</h4>
+<div class="sect4">
+<h5 id="applying_yaml_configuration_for_knative_operators">Applying YAML configuration for Knative operators</h5>
 <div class="paragraph">
 <div class="title">Procedure</div>
 <p>Apply the <code>knative-operators.catalogsource.yaml</code> configuration file using the following command.</p>
@@ -591,9 +581,10 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 </div>
 </div>
 </div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-10-31 15:00:59 GMT
+Last updated 2018-10-31 15:18:10 GMT
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">

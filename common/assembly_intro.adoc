@@ -10,3 +10,6 @@
 Serverless concepts like scaling pods and containers on demand, or managing apps using Operators via the {OLM} (OLM), are now possible on OpenShift using {ProjectName}.
 
 include::con_ocf-components.adoc[leveloffset=+1]
+//include::con_architecture.adoc[leveloffset=+1]
+
+include::assembly_ocf-prereqs.adoc[leveloffset=+1]

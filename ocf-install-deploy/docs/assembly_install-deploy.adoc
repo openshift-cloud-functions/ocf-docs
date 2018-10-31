@@ -5,9 +5,6 @@
 :parent-context: {context}
 
 [id='assembly-2-{context}']
-= Installing and deploying {ProjectName}
-
-include::assembly_ocf-prereqs.adoc[leveloffset=+1]
 include::proc_installing-OLM.adoc[leveloffset=+1]
 include::proc_installing-knative-operators.adoc[leveloffset=+1]
 
