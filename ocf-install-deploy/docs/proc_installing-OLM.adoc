@@ -5,22 +5,27 @@
 [id='installing-OLM']
 = Installing {OLM}
 
-//[id='doing-one-procedure_{context}']
-// The `context` attribute enables module reuse. Every module's ID includes {context}, which ensures that the module has a unique ID even if it is reused multiple times in a guide.
-== Doing one procedure
-
-This paragraph is the procedure module introduction: a short description of the procedure.
+The following procedure describes steps to complete an installation of {OLM} on {mini}.
 
 .Procedure
 
-. Start each step with an active verb.
+. Clone the OLM repository
+----
+git clone git@github.com:operator-framework/operator-lifecycle-manager.git
+----
 
-. Include one command or action per step.
+. Navigate to the cloned repo, `operator-lifecycle-manager` on your local directory.
 
-. Use an unnumbered bullet (*) if the procedure includes only one step.
+. Login as cluster administrator
+----
+oc login -u admin -p admin
+----
+
+. Run the following command
+----
+oc create -f deploy/okd/manifests/latest/
+----
 
 .Additional resources
 
-* A bulleted list of links to other material closely related to the contents of the procedure module.
-* For more details on writing procedure modules, see the link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
-* Use a consistent system for file names, IDs, and titles. For tips, see _Anchor Names and File Names_ in link:https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide[Modular Documentation Reference Guide].
+* For more information on {OLM}, see the link:https://github.com/operator-framework/operator-lifecycle-manager[Operator Lifecycle Manager Github documentation].
