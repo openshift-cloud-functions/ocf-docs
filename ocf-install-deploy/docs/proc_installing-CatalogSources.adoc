@@ -1,0 +1,20 @@
+// Module included in the following assemblies:
+//
+// assembly_install-deploy.adoc
+
+[id='installing-CatalogSources']
+= Installing CatalogSources
+
+Using the `knative-operators.catalogsource.yaml` configuration provides an `InstallPlan` and `Subscription` which enables automated installation, dependency resolution and updates for operators.
+
+.Procedure
+
+. Apply the `knative-operators.catalogsource.yaml` configuration using the following command.
++
+----
+oc apply -f https://raw.githubusercontent.com/openshift-cloud-functions/knative-operators/master/knative-operators.catalogsource.yaml
+----
+
+.Additional resources
+
+* For more information on `CatalogSources`, `InstallPlan` and `Subscription` functionality, see the link:https://github.com/operator-framework/operator-lifecycle-manager/blob/master/Documentation/design/architecture.md[Operator Lifecycle Manager architecture documentation].

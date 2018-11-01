@@ -3,25 +3,28 @@
 // assembly_install-deploy.adoc
 
 [id='installing-OLM']
-= Installing {OLM}
+= Installing {OLM} on {mini}
 
 The following procedure describes steps to complete an installation of {OLM} on {mini}.
 
 .Procedure
 
 . Clone the OLM repository
++
 ----
 git clone git@github.com:operator-framework/operator-lifecycle-manager.git
 ----
-
++
 . Navigate to the cloned repo, `operator-lifecycle-manager` on your local directory.
-
++
 . Login as cluster administrator
++
 ----
 oc login -u admin -p admin
 ----
-
++
 . Run the following command
++
 ----
 oc create -f deploy/okd/manifests/latest/
 ----

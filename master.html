@@ -439,8 +439,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#installing_openshift_cloud_functions_on_okd_minishift">2. Installing OpenShift&#160;Cloud&#160;Functions on OKD/Minishift</a>
 <ul class="sectlevel3">
-<li><a href="#installing-OLM">2.1. Installing Operator Lifecycle Manager</a></li>
-<li><a href="#installing-knative-operators">2.2. Installing Knative Operators</a></li>
+<li><a href="#installing-OLM">2.1. Installing Operator Lifecycle Manager on Minishift</a></li>
+<li><a href="#access-console">2.2. Accessing the Operator Lifecycle Manager console</a></li>
+<li><a href="#installing-CatalogSources">2.3. Installing CatalogSources</a></li>
 </ul>
 </li>
 </ul>
@@ -464,7 +465,7 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 </dd>
 <dt class="hdlist1">Operator Lifecycle Manager (OLM)</dt>
 <dd>
-<p>Short description of OLM.</p>
+<p>OLM allows users to manage applications using operators (controllers used to extend the Kubernetes API for application management).</p>
 </dd>
 </dl>
 </div>
@@ -472,10 +473,10 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p>For more information on OpenShift, see <a href="https://docs.openshift.com/">Red Hat&#8217;s OpenShift documentation</a>.</p>
+<p>For more information on Operator Lifecycle Manager&#8217;s architecture, see the <a href="https://github.com/operator-framework/operator-lifecycle-manager/blob/master/Documentation/design/architecture.md">OLM Github documentation</a>.</p>
 </li>
 <li>
-<p>For more information on Knative, see the <a href="https://github.com/knative/docs">Knative documentation repository on Github</a>.</p>
+<p>For more information on Knative, see the <a href="https://github.com/knative/docs">Knative Github documentation</a>.</p>
 </li>
 </ul>
 </div>
@@ -526,23 +527,39 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 <h2 id="installing_openshift_cloud_functions_on_okd_minishift">2. Installing OpenShift&#160;Cloud&#160;Functions on OKD/Minishift</h2>
 <div class="sectionbody">
 <div class="sect3">
-<h4 id="installing-OLM">2.1. Installing Operator Lifecycle Manager</h4>
-<div class="sect4">
-<h5 id="doing_one_procedure">Doing one procedure</h5>
+<h4 id="installing-OLM">2.1. Installing Operator Lifecycle Manager on Minishift</h4>
 <div class="paragraph">
-<p>This paragraph is the procedure module introduction: a short description of the procedure.</p>
+<p>The following procedure describes steps to complete an installation of Operator Lifecycle Manager on Minishift.</p>
 </div>
 <div class="olist arabic">
 <div class="title">Procedure</div>
 <ol class="arabic">
 <li>
-<p>Start each step with an active verb.</p>
+<p>Clone the OLM repository</p>
+<div class="listingblock">
+<div class="content">
+<pre>git clone git@github.com:operator-framework/operator-lifecycle-manager.git</pre>
+</div>
+</div>
 </li>
 <li>
-<p>Include one command or action per step.</p>
+<p>Navigate to the cloned repo, <code>operator-lifecycle-manager</code> on your local directory.</p>
 </li>
 <li>
-<p>Use an unnumbered bullet (*) if the procedure includes only one step.</p>
+<p>Login as cluster administrator</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc login -u admin -p admin</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Run the following command</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc create -f deploy/okd/manifests/latest/</pre>
+</div>
+</div>
 </li>
 </ol>
 </div>
@@ -550,31 +567,71 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 <div class="title">Additional resources</div>
 <ul>
 <li>
-<p>A bulleted list of links to other material closely related to the contents of the procedure module.</p>
-</li>
-<li>
-<p>For more details on writing procedure modules, see the <a href="https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide">Modular Documentation Reference Guide</a>.</p>
-</li>
-<li>
-<p>Use a consistent system for file names, IDs, and titles. For tips, see <em>Anchor Names and File Names</em> in <a href="https://github.com/redhat-documentation/modular-docs#modular-documentation-reference-guide">Modular Documentation Reference Guide</a>.</p>
+<p>For more information on Operator Lifecycle Manager, see the <a href="https://github.com/operator-framework/operator-lifecycle-manager">Operator Lifecycle Manager Github documentation</a>.</p>
 </li>
 </ul>
 </div>
 </div>
+<div class="sect3">
+<h4 id="access-console">2.2. Accessing the Operator Lifecycle Manager console</h4>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Navigate to the <code>operator-lifecycle-manager</code> directory and run the following command.</p>
+<div class="listingblock">
+<div class="content">
+<pre> ./scripts/run_console_local.sh</pre>
+</div>
+</div>
+</li>
+<li>
+<p>You should see an IP address output in the terminal window similar to the following format.</p>
+<div class="listingblock">
+<div class="content">
+<pre>Using https://192.168.42.173:8443</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Connect to the console using a web browser by navigating to the console address. This can be found by appending <code>/console</code> on to the IP address given in the terminal.</p>
+<div class="paragraph">
+<p>The example below shows an example address using the example IP given.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>https://192.168.42.173:8443/console</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
 </div>
 <div class="sect3">
-<h4 id="installing-knative-operators">2.2. Installing Knative Operators</h4>
-<div class="sect4">
-<h5 id="applying_yaml_configuration_for_knative_operators">Applying YAML configuration for Knative operators</h5>
+<h4 id="installing-CatalogSources">2.3. Installing CatalogSources</h4>
 <div class="paragraph">
-<div class="title">Procedure</div>
-<p>Apply the <code>knative-operators.catalogsource.yaml</code> configuration file using the following command.</p>
+<p>Using the <code>knative-operators.catalogsource.yaml</code> configuration provides an <code>InstallPlan</code> and <code>Subscription</code> which enables automated installation, dependency resolution and updates for operators.</p>
 </div>
+<div class="olist arabic">
+<div class="title">Procedure</div>
+<ol class="arabic">
+<li>
+<p>Apply the <code>knative-operators.catalogsource.yaml</code> configuration using the following command.</p>
 <div class="listingblock">
 <div class="content">
 <pre>oc apply -f https://raw.githubusercontent.com/openshift-cloud-functions/knative-operators/master/knative-operators.catalogsource.yaml</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For more information on <code>CatalogSources</code>, <code>InstallPlan</code> and <code>Subscription</code> functionality, see the <a href="https://github.com/operator-framework/operator-lifecycle-manager/blob/master/Documentation/design/architecture.md">Operator Lifecycle Manager architecture documentation</a>.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>

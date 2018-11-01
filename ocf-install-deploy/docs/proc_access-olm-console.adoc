@@ -1,0 +1,35 @@
+// Module included in the following assemblies:
+//
+// assembly_install-deploy.adoc
+
+[id='access-console']
+
+= Accessing the {OLM} console
+
+.Procedure
+
+. Navigate to the `operator-lifecycle-manager` directory and run the following command.
++
+----
+ ./scripts/run_console_local.sh
+----
++
+. You should see an IP address output in the terminal window similar to the following format.
++
+----
+Using https://192.168.42.173:8443
+----
++
+. Connect to the console using a web browser by navigating to the console address. This can be found by appending `/console` on to the IP address given in the terminal.
++
+The example below shows an example address using the example IP given.
++
+----
+https://192.168.42.173:8443/console
+----
+
+////
+* OLM runs in an entirely separate console to Minishift. For OCP I think this is all integrated.
+* Is the plan to integrate this? What is the plan for user experience here?
+* These steps will be incorrect because operators not showing up in my console - how do we ACTUALLY access OLM console? Does this exist for minishift, etc?
+////

@@ -9,9 +9,9 @@ Knative::
 Short description of Knative.
 
 {OLM} (OLM)::
-Short description of OLM.
+OLM allows users to manage applications using operators (controllers used to extend the Kubernetes API for application management).
 
 .Additional resources
 
-* For more information on {OS}, see link:https://docs.openshift.com/[Red Hat's OpenShift documentation].
-* For more information on Knative, see the link:https://github.com/knative/docs[Knative documentation repository on Github].
+* For more information on {OLM}'s architecture, see the link:https://github.com/operator-framework/operator-lifecycle-manager/blob/master/Documentation/design/architecture.md[OLM Github documentation].
+* For more information on Knative, see the link:https://github.com/knative/docs[Knative Github documentation].
