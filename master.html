@@ -442,6 +442,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#installing-OLM">2.1. Installing Operator Lifecycle Manager on Minishift</a></li>
 <li><a href="#access-console">2.2. Accessing the Operator Lifecycle Manager console</a></li>
 <li><a href="#installing-CatalogSources">2.3. Installing CatalogSources</a></li>
+<li><a href="#create-namespaces">2.4. Creating required Knative namespaces</a></li>
 </ul>
 </li>
 </ul>
@@ -632,6 +633,68 @@ Serverless concepts like scaling pods and containers on demand, or managing apps
 <p>For more information on <code>CatalogSources</code>, <code>InstallPlan</code> and <code>Subscription</code> functionality, see the <a href="https://github.com/operator-framework/operator-lifecycle-manager/blob/master/Documentation/design/architecture.md">Operator Lifecycle Manager architecture documentation</a>.</p>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="create-namespaces">2.4. Creating required Knative namespaces</h4>
+<div class="paragraph">
+<p>To install each Knative operator on OpenShift&#160;Cloud&#160;Functions, you must create the correct namespace (project) in your cluster, then install each operator in its corresponding namespace.</p>
+</div>
+<div class="sect4">
+<h5 id="creating_the_knative_build_namespace">Creating the Knative build namespace</h5>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Use the following command to create the <code>knative-build</code> namespace.</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc new-project knative-build</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="creating_the_knative_serving_namespace">Creating the Knative serving namespace</h5>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Use the following command to create the <code>knative-serving</code> namespace.</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc new-project knative-serving</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="creating_the_knative_eventing_namespace">Creating the Knative eventing namespace</h5>
+<div class="ulist">
+<div class="title">Procedure</div>
+<ul>
+<li>
+<p>Use the following command to create the <code>knative-eventing</code> namespace.</p>
+<div class="listingblock">
+<div class="content">
+<pre>oc new-project knative-eventing</pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Additional resources</div>
+<ul>
+<li>
+<p>For more information on Operator Lifecycle Manager, see the <a href="https://github.com/operator-framework/operator-lifecycle-manager">Operator Lifecycle Manager Github documentation</a>.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>

@@ -1,0 +1,42 @@
+// Module included in the following assemblies:
+//
+// assembly_install-deploy.adoc
+
+[id='create-namespaces']
+= Creating required Knative namespaces
+
+To install each Knative operator on {ProjectName}, you must create the correct namespace (project) in your cluster, then install each operator in its corresponding namespace.
+
+== Creating the Knative build namespace
+
+.Procedure
+
+* Use the following command to create the `knative-build` namespace.
++
+----
+oc new-project knative-build
+----
+
+== Creating the Knative serving namespace
+
+.Procedure
+
+* Use the following command to create the `knative-serving` namespace.
++
+----
+oc new-project knative-serving
+----
+
+== Creating the Knative eventing namespace
+
+.Procedure
+
+* Use the following command to create the `knative-eventing` namespace.
++
+----
+oc new-project knative-eventing
+----
+
+.Additional resources
+
+* For more information on {OLM}, see the link:https://github.com/operator-framework/operator-lifecycle-manager[Operator Lifecycle Manager Github documentation].

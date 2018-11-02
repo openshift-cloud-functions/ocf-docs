@@ -8,5 +8,7 @@
 include::proc_installing-OLM.adoc[leveloffset=+1]
 include::proc_access-olm-console.adoc[leveloffset=+1]
 include::proc_installing-CatalogSources.adoc[leveloffset=+1]
+include::proc_create-namespaces.adoc[leveloffset=+1]
+
 
 :context: {parent-context}
